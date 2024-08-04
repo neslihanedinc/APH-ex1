@@ -1,0 +1,17 @@
+#Write a Python function that takes a list of numbers and returns the largest number in the list.
+def find_the_largest_number(numbers):
+#eğer liste boşsa none kullanabiliriz
+    if not numbers:
+        return None 
+#ilk elemanı en büyük kabul ediyorum
+    largest= numbers[0]
+#listenin geri kalanını dolaşacağım.
+    for number in numbers[1:]:
+        if number> largest:
+            largest=number
+
+    return largest 
+#fonksiyonu test edecrğiz
+numbers = [1, 35, 5, 7, -10, 2, 5, 19]
+print("en büyük sayı:",find_the_largest_number(numbers))
+
